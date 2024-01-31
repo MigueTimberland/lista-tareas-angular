@@ -4,5 +4,5 @@ Este proyecto utiliza un servicio para gestionar las tareas empleando Observable
 
 ## Servidor de desarrollo
 
-Ejecute `ng serve` para un servidor de desarrollo y Navega a `http://localhost:4200/`. 
+Primero ejecute `npm install` para instalar las dependencias y luego `ng serve` para levantar el servicio en la ruta `http://localhost:4200/`. 
 La aplicación se recargará automáticamente al cambiar alguno de los archivos del fuente.
