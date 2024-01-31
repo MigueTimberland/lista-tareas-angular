@@ -1,0 +1,16 @@
+<div>
+  <h2>Lista de Tareas</h2>
+  <ul>
+    <li *ngFor="let tarea of listaTareas; let i = index">
+      <input type="checkbox" [(ngModel)]="tarea.completada" />
+      <span [ngClass]="{'completada': tarea.completada}" [ngStyle]="{'color': tarea.completada ? 'green' : 'black'}">
+        {{ tarea.texto }}
+      </span>
+      <span *ngIf="tarea.completada; else pendienteText" [ngStyle]="{'color': 'green'}">Completado</span>
+      <ng-template #pendienteText [ngStyle]="{'color': 'red'}">Pendiente</ng-template>
+      <button (click)="eliminarTarea(i)">Eliminar</button>
+    </li>
+  </ul>
+  <input type="text" placeholder="Nueva tarea" [(ngModel)]="nuevaTarea" />
+  <button (click)="agregarTarea()">Agregar Tarea</button>
+</div>
